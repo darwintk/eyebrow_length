@@ -14,7 +14,7 @@ dets = detector(gray, 1)	# 使用人脸分类器找到图中的人脸
 for face in dets:
     # 找到人脸矩形框的四个角点
     left = face.left()
-    top = face.top()
+    top = face.top()sss
     right = face.right()
     bottom = face.bottom()
     # 在图片中标注人脸，并显示
@@ -26,7 +26,7 @@ for face in dets:
 完整代码：[facesDetection](./facesDetection.py)
 
 识别的结果如下图所示：
-![Chelsea](https://github.com/darwintk/eyebrow_length/tree/master/out_img/chelsea1_face.jpg)
+![Chelsea](./out_img/chelsea1_face.jpg)
 
 
 ## Dlib面部识别的68个特征点
@@ -44,7 +44,7 @@ for face in dets:
 - 嘴巴内轮廓 61~68 
 
 如图所示：
-![Ronald](https://github.com/darwintk/eyebrow_length/tree/master/out_img/Ronald1_68points.jpg)
+![Ronald](./out_img/Ronald1_68points.jpg)
 
 代码如下：
 
