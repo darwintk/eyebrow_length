@@ -1,12 +1,13 @@
 # Dlib面部识别以及68个特征点
 
 > 在处理图像上，opencv比较常用，因此除了人脸识别使用了dlib库，其他地方都使用了opencv来进行处理
+
 本代码参考[vipstone/faceai](https://github.com/vipstone/faceai)
 
 ## Dlib面部识别
 使用dlib中的get_frontal_face_detector()来查找图片中的人脸，代码如下：
 
-···python
+``` python
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)	# 转灰度图
 detector = dlib.get_frontal_face_detector()	# 人脸分类器
 dets = detector(gray, 1)	# 使用人脸分类器找到图中的人脸
@@ -20,8 +21,10 @@ for face in dets:
     cv2.rectangle(img, (left, top), (right, bottom), (255 ,0, 0), 2)
     cv2.imshow("image", img)
     cv2.waitKey(0)
-···
+```
+
 完整代码：[facesDetection](./facesDetection.py)
+
 识别的结果如下图所示：
 ![Chelsea](./out_img/chelsea1_face.jpg)
 
@@ -44,7 +47,8 @@ for face in dets:
 ![Ronald](./out_img/Ronald1_68points.jpg)
 
 代码如下：
-···python
+
+``` python
 # 获取人脸检测器
 predictor = dlib.shape_predictor(
     "./shape_predictor_68_face_landmarks.dat")
@@ -76,7 +80,8 @@ cv2.imshow("image_small", imgsmall)
 cv2.waitKey(0)
 cv2.imwrite("Ronald68.jpg",imgsmall)
 cv2.destroyAllWindows()
-···
+```
+
 完整代码：[detectionDlib](./detectionDlib.py)
 
 
