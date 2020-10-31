@@ -26,7 +26,7 @@ for face in dets:
 完整代码：[facesDetection](./facesDetection.py)
 
 识别的结果如下图所示：
-![Chelsea](./out_img/chelsea1_face.jpg)
+![Chelsea](./out_img/chelsea1_faces.jpg)
 
 
 ## Dlib面部识别的68个特征点
@@ -44,7 +44,7 @@ for face in dets:
 - 嘴巴内轮廓 61~68 
 
 如图所示：
-![Ronald](./out_img/Ronald1_68points.jpg)
+![Ronald](./out_img/Ronald68.jpg)
 
 代码如下：
 
